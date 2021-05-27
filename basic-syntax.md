@@ -2,7 +2,11 @@
 
 >The UltraGen syntax guide for writing your applications.
 
-Let's now introduce you to the basic UltraGen syntax. UltraGen is a imperative language which programs are composed by statements or blocks of statements and expressions. Statements are delimited by a new line. Blocks are delimited by a line with keyword and an `end` keyword. Expressions are statements that return something.\n\n## Comments\n\nLet's start with comments as we will use it in examples. You comment a line with a `#`. You can comment a block (multiline comment) starting it by `###` and ending with `###!`.
+Let's now introduce you to the basic UltraGen syntax. UltraGen is a imperative language which programs are composed by statements or blocks of statements and expressions. Statements are delimited by a new line. Blocks are delimited by a line with keyword and an `end` keyword. Expressions are statements that return something.
+
+## Comments
+
+Let's start with comments as we will use it in examples. You comment a line with a `#`. You can comment a block (multiline comment) starting it by `###` and ending with `###!`.
 
 ```ruby
 # a line of comment
@@ -19,7 +23,9 @@ UltraGen valid names must match the regex `^\\$?[_A-Za-z_][A-Za-z0-9_]*$`
 Are examples of valid names: `someVar`, `_topZeira`, `fooB4r`, `$mahalo`, `$_STRONG`.
 Are invalid names: `5omeVar`, `test$`, `foo-bar`.
 Names declared starting with a `$` are constants, that is, its values can't be changed.
+
 ## Variables
+
 UltraGen is a dynamically and strongly typed language. You don't need to declare variable or constant type however you can't mix types in operations. Here are some examples.
 ```ruby
 num = 10 # num is assumed to be an integer
