@@ -1,1 +1,1 @@
-"# UltraGen docs content" 
+# UltraGen docs content
