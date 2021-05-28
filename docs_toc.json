@@ -1,11 +1,13 @@
 [
     {
         "slug": "getting-started",
+        "title": "Getting started",
         "teaser": "Get started to UltraGen basic concepts and know what you can do with it.",
         "icon": "fa fa-start"
     },
     {
         "slug": "basic-syntax",
+        "title": "Basic syntax",
         "teaser": "The UltraGen syntax guide for writing your applications.",
         "icon": "fa fa-start"
     }
