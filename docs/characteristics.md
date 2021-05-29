@@ -44,4 +44,4 @@ It has already been said on [/docs/basic-syntax](basic-syntax doc). We brought i
 
 ## More?
 
-If you understand that other characteristics of language are worthy no note in this article, please open an [https://github.com/alantelles/ultragendocs_content/issues/new](issue) with you suggestion.
+If you understand that other characteristics of language are worthy no note in this article, please open an [issue](https://github.com/alantelles/ultragendocs_content/issues/new) with you suggestion.
