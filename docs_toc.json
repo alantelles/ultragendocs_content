@@ -16,5 +16,11 @@
         "title": "Characteristics",
         "teaser": "A little talk about UltraGen",
         "icon": "fas fa-cogs"
+    },
+    {
+        "slug": "basic-io",
+        "title": "Basic IO",
+        "teaser": "Dealing with input and output streams",
+        "icon": "fas fa-cogs"
     }
 ]
