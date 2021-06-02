@@ -2,7 +2,8 @@
 
 >The UltraGen syntax guide for writing your applications.
 
-Let's now introduce you to the basic UltraGen syntax. UltraGen is a imperative language which programs are composed by statements or blocks of statements and expressions. Statements are delimited by a new line. Blocks are delimited by a line with keyword and an `end` keyword. Expressions are statements that return something.
+Let's now introduce you to the basic UltraGen syntax. UltraGen is a imperative language which programs are composed by statements or blocks of statements and expressions. Statements are delimited by a new line. Blocks are delimited by a line with keyword and an `end` keyword. Expressions are statements that return something. There is no required order by statements. An `include` statement while typically could be thought to be at start of program can appear in any part of it.
+UltraGen script files must always have the extension **.ultra**. Otherwise they will be considered plain text script and will parsed like that.
 
 ## Comments
 
@@ -233,6 +234,24 @@ end
 # 1
 # 2
 ```
+
+## Plain text syntax
+
+UltraGen supports plain text mixed with language commands. Source files with extension different than **. ultra** are interpreted as plain text. 
+
+All syntax and scope rules are valid when you are using UltraGen code inside text. All text is passed to output as it is. In addition you can use an evaluated expression embedded in the code through the `{{` and `}}` syntax. Or you can write a line of regular UltraGen code by using a `@` in the start of the line.
+
+```html
+@title = "My page"
+<h1>{{ title }}</h1>
+@items = ['item 1', 'item 2']
+<ul>
+@for(items, item)
+    <li>{{ item }}</li>
+@end
+</ul>
+```
+
 
 ## You're ready to go now!
 

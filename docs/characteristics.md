@@ -8,7 +8,7 @@ In this topic we will talk about characteristics and expected behaviors of Ultra
 
 UltraGen is a object oriented language. Every type in UltraGen is a descendant from internal type `TInstanceOf`, even *null*, which is an instance of `TNullInstance`.
 
-Only integers and floats can be mixed in an operation. Other types mismatches will generate an error. Operations between an integer and a float will have as result the type who can hold the value. If the result is float, the type of result will be a `Float`. If result is integer the type will be an `Integer`.
+Only integers, bytes and floats can be mixed in an operation. Other types mismatches will generate an error. Operations between an integer and a float will have as result the type who can hold the value. If the result is float, the type of result will be a `Float`. If result is integer the type will be an `Integer`. The result of operations using `Byte` will be always casted to `Integer`.
 
 In the next snippet is shown the result of some operations. As you will see at the last line, this rule applies to logical and comparisons operations too.
 
@@ -35,12 +35,6 @@ UltraGen philosophy is to balance between the ease of use and semantics. That sa
 Despite of the before topic, there are some times that UltraGen is sure of what should happen and do the string coercion for you. So, when you use the `live` statement the arguments are all casted to string. When setting headers from response or request you don't need to worry about this too.
 
 Other time where UltraGen "relies on developer" is on the classes implementation. You can't declare attributes or methods in classic or instance scope. All attributes are declared in "type" scope. Instantied objects and the classes can access the same attribute
-
-## Plain text capabilities
-
-UltraGen can execute script mixed with your plain text. All syntax and scope rules are valid when you are using UltraGen code inside text. All text is passed to output as it is. In addition you can use an evaluated expression through the `{{` and `}}` syntax. Or you can write a line of code by using a `@` in the start of the line.
-
-It has already been said on [/docs/basic-syntax](basic-syntax doc). We brought it back to notice that any expression or function is valid here. All variables or functions that are in the text/script scope can be used.
 
 ## More?
 
