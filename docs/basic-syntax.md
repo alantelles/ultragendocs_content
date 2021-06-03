@@ -18,7 +18,7 @@ Also called
 Multiline comment
 ###!
 ```
-# Names
+## Names
 UltraGen is a case-sensitive language. `value` is different from `Value`.
 UltraGen valid names must match the regex `^\\$?[_A-Za-z_][A-Za-z0-9_]*$`
 Are examples of valid names: `someVar`, `_topZeira`, `fooB4r`, `$mahalo`, `$_STRONG`.
