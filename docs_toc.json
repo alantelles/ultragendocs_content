@@ -22,5 +22,11 @@
         "title": "Basic IO",
         "teaser": "Dealing with input and output streams",
         "icon": "fas fa-cogs"
+    },
+    {
+        "slug": "primitive-types",
+        "title": "Primitive types",
+        "teaser": "The base types for expressing values in UltraGen",
+        "icon": "fas fa-cogs"
     }
 ]
