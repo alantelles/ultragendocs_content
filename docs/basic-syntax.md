@@ -188,7 +188,10 @@ Dictionaries are declared with its values inside `{` and `}` using a `,` to sepa
 a = {'key': 'value', :otherKey : 1000}
 ```
 
->Dictionaries and lists will be more explained ahead.
+```callout
+Dictionaries and lists will be more explained ahead.:success
+callout
+```
 
 ## Iterations
 

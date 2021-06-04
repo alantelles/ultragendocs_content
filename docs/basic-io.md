@@ -37,4 +37,9 @@ When processing plain text scripts the plain text is always part of the live out
 
 Every scope level of a program has its live output. The default return of a function is its live output. It's worthy to remember because it's in central idea of the suggested way to develop the views of your web applications: build templates like components. Another thing to remember is that if for some reason you need your function to return `null`, you must explicitly set a `return null` statement. If there's no `return`statement in a function the return is its own live.
 
-The live output can be accessed using the name `__LIVE__`. While it exists and can be retrieved or set directly it's highly not recommended for semantic reasons.
+The live output can be accessed using the name `__LIVE__`.
+
+```callout
+Despite that this "access point" exists and can be retrieved or set directly it's highly not recommended for semantic reasons.:warning
+callout
+```

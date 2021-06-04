@@ -46,4 +46,8 @@ path = "my\windows\path.exe"
 path = "my\\windows\\path.exe"
 # this is right
 ```
-However, the most recommended is to use the `OS.pathJoin` method to handle file paths.
+However, the most recommended is to use the `path` method from **List** type to handle file paths.
+
+```ruby
+path = ['my', 'windows', 'path.exe'].path()
+```

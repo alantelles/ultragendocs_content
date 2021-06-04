@@ -34,7 +34,7 @@ UltraGen philosophy is to balance between the ease of use and semantics. That sa
 
 Despite of the before topic, there are some times that UltraGen is sure of what should happen and do the string coercion for you. So, when you use the `live` statement the arguments are all casted to string. When setting headers from response or request you don't need to worry about this too.
 
-Other time where UltraGen "relies on developer" is on the classes implementation. You can't declare attributes or methods in classic or instance scope. All attributes are declared in "type" scope. Instantied objects and the classes can access the same attribute
+Other time where UltraGen "relies on developer" is on the classes implementation. As we'll see ahead, UltraGen syntax for class does not use a block. You only need to declare it with a `class MyClass`. Methods and class attributes can be declared in any place of the application.
 
 ## More?
 
