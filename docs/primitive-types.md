@@ -51,3 +51,40 @@ However, the most recommended is to use the `path` method from **List** type to 
 ```ruby
 path = ['my', 'windows', 'path.exe'].path()
 ```
+
+### *idStrings*
+
+There is a syntax sugar for strings that are valid names. They are the **idString**. They are Norma  strings and support all of its methods. The only difference is that they written with a colon followed by a name.
+
+```ruby
+x = :aName
+print (typeof(x))
+# will print "String"
+```
+
+This form exists for better semantics in cases where an argument is a string but a form that seems like an identifier is better readable. Let's take a look at this snippet which shows a Router handler definition. Don't matter about the router. Focus at concept.
+
+These definitions require a route, a name for that endpoint and a function as arguments.
+
+```ruby
+# the second arg must be a string
+router.get('/some/path', 'myRoute', handler)
+# now written in idString syntax
+router.get('/some/path', :myRoute, handler)
+```
+
+In the first form, "myRoute" seems like it could be any literal value. In fact it is but in this context "myRoute" is an identifier of a route. So the idString syntax make this more evident by dropping the quotes.
+
+In your script, you can use this name to reverse return a route with `router.urlFor(:myRoute)`. It's visible that `:myRoute` looks much more like an identifier than `"myRoute"`. Another good case of use is to define or access dictionary keys which presents the same semantics. In the next snippet we're getting hypothetical information from a user as JSON and the fields are *name*, *username*, *age*.
+
+```ruby
+resp = Request.get("/user/someone")
+user = JSON.parse(resp.text)
+print(user[:name])
+print(user[:age])
+print (user[:age])
+```
+
+Again we made the fields look like identifiers with this simples syntax change.
+
+That said, when you're in a case like that, use *idStrings*.
