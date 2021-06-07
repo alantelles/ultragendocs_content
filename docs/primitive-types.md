@@ -88,3 +88,37 @@ print (user[:age])
 Again we made the fields look like identifiers with this simples syntax change.
 
 That said, when you're in a case like that, use *idStrings*.
+
+## Boolean
+
+**Boolean** is the type for representing boolean values. They can be only `true` or `false`. The most important thing to talk about this type is to show its "truthy" and "falsy" values. This definition is used in `if` and `while` evaluations.
+
+### Truthy and falsy values
+
+In an `if` or `while` condition, some non-boolean values are taken as true or false so you can write a little less. We call this conventions **truthy** and **falsy**
+
+#### Are truthy:
+
+- Any string with length greater than zero.
+- Numerics greater than 0
+- A list with length greater than 0
+- A non-empty dictionary
+- Any object except `null`
+
+#### Are falsy:
+
+- An empty string
+- Numerics less than or equal 0
+- A list with 0 length
+- An empty dictionary
+- The `null` object.
+
+Remember that you can't compare different types. So, even though an empty string is evaluated as `false` you can't make a `"" == false` comparison. It will return a type error and advice that you can't compare different types. If you need something like this, type cast the value with `bool`. It uses the same rules to evaluate a value as true or false.
+
+## NullType
+
+This is the type for holding the `null` object. Internally it's not a null pointer reference. Even `null` is an object internally in UltraGen. So, set some variable to `null` does not "dereference" it. It just sets a variable to a value that has no specific value. It's like the `var` declaration in some languages just for initialize some variable. Consider that such statement does not exist in UltraGen. A variable must be initialized with a value. If you don't have one but you need the name to exist, use `null`.
+
+## One step forward
+
+In the next chapter we will talk about the composed types. This mean types who are composed by other but are also core types from UltraGen.
