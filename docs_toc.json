@@ -28,5 +28,11 @@
         "title": "Primitive types",
         "teaser": "The base types for expressing values in UltraGen",
         "icon": "fas fa-cogs"
+    },
+    {
+        "slug": "composed-types",
+        "title": "Composed types",
+        "teaser": "The set-like base types for expressing values",
+        "icon": "fas fa-cogs"
     }
 ]
