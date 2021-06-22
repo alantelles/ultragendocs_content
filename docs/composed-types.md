@@ -11,7 +11,7 @@ The composed core types are **lists** and **dictionaries**. They can contain val
 The **List** type holds a sequence of values that can be accessed by a numeric index. The start index of a list is **0**. You can access an item from backward using a negative index.
 
 ```callout
-UltraGen does not have a slice operator. If you need a slice use the `slice` method.:info
+UltraGen does not have a slice operator. If you need a slice use the [code]slice[/code] method.:info
 callout
 ```
 
@@ -66,7 +66,7 @@ d.drop('other') # this deletes the key 'other' from dict
 ```
 
 ```callout
-The method `hasKey` is provided to check if a key exists before trying to retrieve. In addition there's a `get` method that receives two arguments. The key and a value to return if key is not found. Default value is **null**.:success
+The method [code]hasKey[/code] is provided to check if a key exists before trying to retrieve. In addition there's a [code]get[/code] method that receives two arguments. The key and a value to return if key is not found. Default value is [b]null[/b].:success
 callout
 ```
 
