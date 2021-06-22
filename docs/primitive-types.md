@@ -54,7 +54,7 @@ path = ['my', 'windows', 'path.exe'].path()
 
 ### *idStrings*
 
-There is a syntax sugar for strings that are valid names. They are the **idString**. They are Norma  strings and support all of its methods. The only difference is that they written with a colon followed by a name.
+There is a syntax sugar for strings that are valid names. They are the **idStrings**. They are ordinary  strings and support all of its methods. The only difference is that they written with a colon followed by a name.
 
 ```ruby
 x = :aName
