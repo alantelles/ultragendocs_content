@@ -6,6 +6,12 @@
         "icon": "fa fa-start"
     },
     {
+        "slug": "install",
+        "title": "Install",
+        "teaser": "Get instructions to download and install UltraGen.",
+        "icon": "fa fa-start"
+    },
+    {
         "slug": "basic-syntax",
         "title": "Basic syntax",
         "teaser": "The UltraGen syntax guide for writing your applications.",
@@ -14,25 +20,25 @@
     {
         "slug": "characteristics",
         "title": "Characteristics",
-        "teaser": "A little talk about UltraGen",
+        "teaser": "A little talk about UltraGen.",
         "icon": "fas fa-cogs"
     },
     {
         "slug": "basic-io",
         "title": "Basic IO",
-        "teaser": "Dealing with input and output streams",
+        "teaser": "Dealing with input and output streams.",
         "icon": "fas fa-cogs"
     },
     {
         "slug": "primitive-types",
         "title": "Primitive types",
-        "teaser": "The base types for expressing values in UltraGen",
+        "teaser": "The base types for expressing values in UltraGen.",
         "icon": "fas fa-cogs"
     },
     {
         "slug": "composed-types",
         "title": "Composed types",
-        "teaser": "The set-like base types for expressing values",
+        "teaser": "The set-like base types for expressing values.",
         "icon": "fas fa-cogs"
     }
 ]
