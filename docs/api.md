@@ -6,7 +6,7 @@
 
 1. [Core (root scope)](/api/core)
 1. Float
-1. Integer
+1. [Integer](/api/integer)
 1. String
 
 ## Composed types
