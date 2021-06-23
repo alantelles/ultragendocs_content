@@ -4,10 +4,10 @@
 
 ## Primitive types
 
-1. [Core (root scope)](/api/core)
-1. Float
-1. [Integer](/api/integer)
-1. String
+- [Core (root scope)](/api/core)
+- Float
+- [Integer](/api/integer)
+- [String](/api/string)
 
 ## Composed types
 
