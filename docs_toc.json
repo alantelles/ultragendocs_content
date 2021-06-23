@@ -3,7 +3,7 @@
         "slug": "getting-started",
         "title": "Getting started",
         "teaser": "Get started to UltraGen basic concepts and know what you can do with it.",
-        "icon": "fa fa-cogs"
+        "icon": "fa fa-star"
     },
     {
         "slug": "install",
@@ -15,25 +15,25 @@
         "slug": "basic-syntax",
         "title": "Basic syntax",
         "teaser": "The UltraGen syntax guide for writing your applications.",
-        "icon": "fa fa-cogs"
+        "icon": "fa fa-code"
     },
     {
         "slug": "characteristics",
         "title": "Characteristics",
         "teaser": "A little talk about UltraGen.",
-        "icon": "fas fa-cogs"
+        "icon": "fas fa-hashtag"
     },
     {
         "slug": "basic-io",
         "title": "Basic IO",
         "teaser": "Dealing with input and output streams.",
-        "icon": "fas fa-cogs"
+        "icon": "fa fa-terminal"
     },
     {
         "slug": "primitive-types",
         "title": "Primitive types",
         "teaser": "The base types for expressing values in UltraGen.",
-        "icon": "fas fa-cogs"
+        "icon": "fas fa-cog"
     },
     {
         "slug": "composed-types",
@@ -45,6 +45,6 @@
         "slug": "api",
         "title": "API",
         "teaser": "The language reference for all built-in classes and methods",
-        "icon": "fas fa-cogs"
+        "icon": "fas fa-book"
     }
 ]
