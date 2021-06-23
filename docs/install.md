@@ -34,7 +34,7 @@ Another caveat is that **libsagui** depends on your OS [glibc](https://en.wikipe
 
 ## Docker
 
-Not surprisingly, the most compatible and easy way to run UltraGen is using the UltraGen docker image. You call pull the latest version or another image available on dockerhub. The versions are using CalVer are pre releases.
+Not surprisingly, the most compatible and easy way to run UltraGen is using the UltraGen docker image. You call pull the latest version or another image available on dockerhub. The versions are using CalVer for pre releases.
 
 
 - Latest
