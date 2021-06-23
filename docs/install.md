@@ -16,11 +16,11 @@ In this page you'll be guided to install UltraGen in your OS.
 
 ## Windows
 
-- [UltraGen_Win64_0.0.6.zip](/UltraGen_Win64_0.0.6.zip)
+- [UltraGen_Win64_0.0.6.zip](https://github.com/alantelles/ultragen/releases/download/0.6.0/UltraGen_Win64_0.0.6.zip)
 
 ## Linux
 
-- [UltraGen_Linux64_0.0.6.zip](/UltraGen_Linux64_0.0.6.zip)
+- [UltraGen_Linux64_0.0.6.zip](https://github.com/alantelles/ultragen/releases/download/0.6.0/UltraGen_Linux64_0.0.6.zip)
 
 ```callout
 UltraGen for Linux was compiled with Ubuntu and is not tested with other distros. If you have any problem, please, let us know.:warning
