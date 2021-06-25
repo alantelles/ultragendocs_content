@@ -1,6 +1,6 @@
 # Integer
 
->The type for representing integer values on UltraGen
+The primitive type for representing integer values in UltraGen. You can refer to the type documentation in respective [doc](/docs/primitive-types).
 
 ## Attributes
 
