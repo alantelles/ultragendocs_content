@@ -4,12 +4,12 @@
 
 ## Primitive types
 
-- [Core (root scope)](/api/core)
-- Float
+- [Core](/api/core)
+- [Float](/api/float)
 - [Integer](/api/integer)
 - [String](/api/string)
 
 ## Composed types
 
-1. List
-1. Dict
+- [Dict](/api/dict)
+- [List](/api/list)
