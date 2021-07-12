@@ -15,7 +15,7 @@ hello() # calling function
 ```
 
 ```callout
-A thing worth to note as already said in primitive types doc and different from many languages the return of this function is an empty string and not `null` as the default return of a function is its live stream.:success
+A thing worth to note as already said in primitive types doc and different from many languages the return of this function is an empty string and not null as the default return of a function is its live stream.:success
 callout
 ```
 
@@ -71,7 +71,7 @@ end
 myFunc() # I'm anonymous
 ```
 
-# Assigning anonymous functions to other references
+## Assigning anonymous functions to other references
 
 Even though we're using names to show these features, any reference index can be used such as lists or dictionaries values. They are called using it's reference followed by parentheses.
 
