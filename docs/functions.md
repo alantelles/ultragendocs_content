@@ -40,6 +40,7 @@ greet("Alan") # Hello, Alan
 
 ```callout
 You can't declare a parameter without a default value after a parameter with a default value.:warning
+callout
 ```
 
 ## Referencing functions by name
