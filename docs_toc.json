@@ -40,7 +40,13 @@
         "title": "Composed types",
         "teaser": "The set-like base types for expressing values.",
         "icon": "fas fa-cogs"
-    }
+    },
+    {
+        "slug": "functions",
+        "title": "Functions",
+        "teaser": "The set-like base types for expressing values.",
+        "icon": "fas fa-cogs"
+    },
     {
         "slug": "api",
         "title": "API",
