@@ -15,7 +15,7 @@ hello() # calling function
 ```
 
 ```callout
-A thing worth to note as already said in [primitive types doc](/docs/primitive-types) and different from many languages the return of this function is an empty string and not `null` as the default return of a function is its **live** stream.:success
+A thing worth to note as already said in primitive types doc and different from many languages the return of this function is an empty string and not `null` as the default return of a function is its live stream.:success
 callout
 ```
 
