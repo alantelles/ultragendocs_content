@@ -1,4 +1,4 @@
-# Functions and decorators
+# Functions
 
 >Declaring reusable code blocks
 
