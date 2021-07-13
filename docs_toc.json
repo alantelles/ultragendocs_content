@@ -2,49 +2,49 @@
     {
         "slug": "getting-started",
         "title": "Getting started",
-        "teaser": "Get started to UltraGen basic concepts and know what you can do with it.",
+        "teaser": "Get started to UltraGen basic concepts and know what you can do with it",
         "icon": "fa fa-star"
     },
     {
         "slug": "install",
         "title": "Install",
-        "teaser": "Get instructions to download and install UltraGen.",
+        "teaser": "Get instructions to download and install UltraGen",
         "icon": "fa fa-arrow-alt-circle-down"
     },
     {
         "slug": "basic-syntax",
         "title": "Basic syntax",
-        "teaser": "The UltraGen syntax guide for writing your applications.",
+        "teaser": "The UltraGen syntax guide for writing your applications",
         "icon": "fa fa-code"
     },
     {
         "slug": "characteristics",
         "title": "Characteristics",
-        "teaser": "A little talk about UltraGen.",
+        "teaser": "A little talk about UltraGen",
         "icon": "fas fa-hashtag"
     },
     {
         "slug": "basic-io",
         "title": "Basic IO",
-        "teaser": "Dealing with input and output streams.",
+        "teaser": "Dealing with input and output streams",
         "icon": "fa fa-terminal"
     },
     {
         "slug": "primitive-types",
         "title": "Primitive types",
-        "teaser": "The base types for expressing values in UltraGen.",
+        "teaser": "The base types for expressing values in UltraGen",
         "icon": "fas fa-cog"
     },
     {
         "slug": "composed-types",
         "title": "Composed types",
-        "teaser": "The set-like base types for expressing values.",
+        "teaser": "The set-like base types for expressing values",
         "icon": "fas fa-cogs"
     },
     {
         "slug": "functions",
         "title": "Functions",
-        "teaser": "The set-like base types for expressing values.",
+        "teaser": "Declaring reusable code blocks",
         "icon": "fas fa-cogs"
     },
     {
