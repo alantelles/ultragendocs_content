@@ -47,6 +47,12 @@
         "teaser": "Declaring reusable code blocks",
         "icon": "fas fa-cogs"
     },
+{
+        "slug": "decorators",
+        "title": "Decorators",
+        "teaser": "A special case of functions",
+        "icon": "fas fa-cogs"
+    },
     {
         "slug": "api",
         "title": "API",
