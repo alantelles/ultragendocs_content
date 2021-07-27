@@ -152,11 +152,34 @@ vals = ["val1", true, 99]
 multi(*vals, "mid", *range(2)) # val1 true 99 mid 0 1
 ```
 
+## Lambdas
+
+UltraGen support one line anonymous functions called **lambda functions**. For this you use the word `lambda` followed by parameters, a `colon` and the statement. It doesn't need to have a return set. The same function return behavior also applies to this.
+
+```ruby
+func = lambda ( ) : print('a lambda function')
+func() # a lambda function
+other = lambda (arg) : return arg
+print(other('some text')) # some text
+```
+
+```callout
+There's a bug in functions returns in UltraGen that makes returns of application implemented methods cause an Access Violation error (the JavaNullPointerException "similar". Variables doesn't suffer from this. It's treated as minor because it's easy to workaround. Just set a variable with the desired return value. However, as lambdas has only one statement it's not possible. Another workaround for this, if your return is a string is to use [code]live[/code]. Your expression will be sent to live stream and the live stream will be returned, as the default behavior states.:warning
+callout
+```
+
+```ruby
+m = lambda (arg) : live arg.upper( )
+print(m("exp")) # EXP
+# with no error
+```
+
+
 ## Conclusion
 
 One thing to remember is that all described features also apply to methods.
 
 Names starting with `$` are also valid to functions and are also treated as constants.
 
-Now that you know how to use functions in UltraGen we will pass to two special cases of functions with some caveats. Decorators and lambdas.
+Now that you know how to use functions in UltraGen we will pass to a case of functions with some caveats: decorators
 
