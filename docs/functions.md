@@ -164,7 +164,7 @@ print(other('some text')) # some text
 ```
 
 ```callout
-There's a bug in functions returns in UltraGen that makes returns of application implemented methods cause an Access Violation error (the JavaNullPointerException "similar". Variables doesn't suffer from this. It's treated as minor because it's easy to workaround. Just set a variable with the desired return value. However, as lambdas has only one statement it's not possible. Another workaround for this, if your return is a string is to use [code]live[/code]. Your expression will be sent to live stream and the live stream will be returned, as the default behavior states.:warning
+There's a bug in functions returns in UltraGen that makes returns of application implemented methods cause an Access Violation error (the JavaNullPointerException "similar"). Variables doesn't suffer from this. It's treated as minor because it's easy to workaround. Just set a variable with the desired return value. However, as lambdas has only one statement it's not possible. Another workaround for this, if your return is a string is to use [code]live[/code]. Your expression will be sent to live stream and the live stream will be returned, as the default behavior states.:warning
 callout
 ```
 
@@ -181,5 +181,5 @@ One thing to remember is that all described features also apply to methods.
 
 Names starting with `$` are also valid to functions and are also treated as constants.
 
-Now that you know how to use functions in UltraGen we will pass to a case of functions with some caveats: decorators
+Now that you know how to use functions in UltraGen we will pass to a case of functions with some caveats: decorators.
 
