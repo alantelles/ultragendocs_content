@@ -13,3 +13,33 @@ decorator myWrapper(f)
     print("code after")
 end
 ```
+
+For using the decorator you must declare or reference a function and assign it to a reference (typically a name). That reference can so be called after.
+
+```ruby
+# coming from previous example
+function myFunc()
+    print ('my func here')
+end
+myDecorated = myWrapper(myFunc)
+# myDecorated is the myFunc function
+# decorated by myWrapper
+# now I can call it
+myDecorated()
+# code before
+# my func here
+# code after
+```
+
+
+You can also use an anonymous functions can be used as argument.
+
+```ruby
+myDecorated2 = myWrapper (function()
+    print('anonymous')
+end)
+myDecorated2()
+# code before
+# anonymous
+# code after
+```
