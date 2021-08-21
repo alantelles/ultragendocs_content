@@ -38,10 +38,64 @@ greet() # Hello, Stranger
 greet("Alan") # Hello, Alan
 ```
 
+Even references or function results can be used.
+
+```ruby
+x = 100
+function varAsDefault(arg=x)
+    print(arg)
+end
+
+function funcAsDefault(arg="str".upper())
+    print(arg)
+end
+```
+
+It is possible because default value are only evaluated when functions are called. 
+
 ```callout
 You can't declare a parameter without a default value after a parameter with a default value.:warning
 callout
 ```
+
+Function parameters can be type defined. For this, just set the type before the parameter name. In case of a default parameter, the value must type match the defined type in parameter.
+
+```ruby
+function greet(String name)
+    print("Hello, ", name)
+end
+greet(100)
+# raises an argument error
+
+function mySum(Integer a, Integer b="wrong")
+    return a + b
+end
+mySum(8, 9) 
+# ok, 17
+mySum(10)
+# raises an argument error
+# "wrong" is a String
+```
+
+```callout
+As you must have caught, argument type evaluation happens only at function call time. This is why set a default value with wrong type won't raise errors but the call with this wrong type will.:success
+callout
+```
+
+
+Typed and untyped arguments can be used in same function definition
+
+```ruby
+function coerce(String pre, suffix)
+    return pre + str(suffix)
+end
+coerce("some string:", 90)
+coerce("another string", true)
+coerce("any other", ['val', 'val2'])
+# all of that will be ok
+```
+
+
 
 You can declare a function with a variable number of parameters adding a __*__ after the closing parentheses. The arguments after the positional parameters are available inside the function via the `$varArgs` variable which is a list.
 
