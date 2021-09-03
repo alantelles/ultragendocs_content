@@ -71,3 +71,5 @@ addModulePath('/myLibs/modules')
 include @Path.To.File
 ```
  You can add many paths as you want but be aware that the search direction is from last to first added. This can be a problem if you have files with same relative path.
+
+(continue)
