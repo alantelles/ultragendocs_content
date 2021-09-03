@@ -53,6 +53,12 @@
         "teaser": "A special case of functions for annotating functions",
         "icon": "fas fa-cogs"
     },
+{
+        "slug": "including-scripts",
+        "title": "Including scripts",
+        "teaser": "Modularizing your applications",
+        "icon": "fas fa-cogs"
+    },
     {
         "slug": "api",
         "title": "API",
