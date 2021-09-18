@@ -43,4 +43,4 @@ Not surprisingly, the most compatible and easy way to run UltraGen is using the 
 
 - Stable
 
-    `docker pull alantelles/ultragen:06-22-pre`
+    `docker pull alantelles/ultragen:21.09-alpine3.14`
