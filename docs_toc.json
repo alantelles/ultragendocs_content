@@ -54,6 +54,12 @@
         "icon": "fas fa-cogs"
     },
 {
+    "slug": "classes",
+    "title": "Classes",
+    "teaser": "The UltraGen types interface",
+    "icon": "fas fa-book"
+},
+{
         "slug": "including-scripts",
         "title": "Including scripts",
         "teaser": "Modularizing your applications",
