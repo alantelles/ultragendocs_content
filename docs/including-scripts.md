@@ -147,3 +147,11 @@ function getJson() : Response self
     return JSON.parse(self.text) 
 end
 ```
+
+If you write a `load` directly in your script these methods wouldn't be available.
+
+## Setting up default loaded types
+
+As said, every time you run a UltraGen script the module `@Core` is included. This module is the script at `build/modules/Core/_init.ultra`. It has a bunch of include statements for including other modules. If you want to make a module available to every script you execute or even drop some of the defaults just change this file. However, it's suggested you don't remove a include since as any application is supposed to rely on default release configuration of this file.
+
+
