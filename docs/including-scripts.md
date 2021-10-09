@@ -19,12 +19,12 @@ callout
 ```
 
 ```callout
-The script included is actually executed not only his names are imported. That is, if you write something in global scope, it will be executed.:info
+The script included is actually executed not only his names are imported. That is, if you write something in global scope, it will be executed. In case of a template, it will rendered at include time.:info
 callout
 ```
 
 ```callout
- UltraGen handles the use of **slash** as separator in Windows. No need to convert it replace.:info
+ UltraGen handles the use of [b]slash[/b] as separator in Windows. No need to convert it replace.:info
 callout
 ```
 
@@ -32,24 +32,73 @@ callout
 
 The best way to isolate scopes is to think your external script as a library and write it as a class. Different from Java or other languages the script file names have nothing to do with class names. Neither there is a helper which relate names in a script with its names.
 
-If you don't want to enclose your script in a class there's an alternative. The *scoped include*. You can pass a name which will be declared as a class to hold your included names. This can be done as shown.
+## Even templates?
+
+Yes. It's a good practice to declare your templates as functions to enclose them and have control about when they are rendered and about passed arguments.
+
+```html
+# template at root scope
+# temp_root.ultra
+<h1>{{ title }}</h1>
+```
+
+```html
+# template at function scope
+# temp_func.ultra
+@function h1(title)
+    <h1>{{ title }}</h1>
+@end
+```
+```ruby
+title = 'some title'
+include 'temp_root.ultra'
+# will render the template at include
+```
+```ruby
+include 'temp_func.ultra'
+# will not render
+h1('some title')
+# now it's rendered
+```
+
+If you have a group of related templates in different files you can have a structure like this
+
+```
+- templates
+|-- UsersTemplates
+|---- _init.ultra
+   |-- index.ultra
+   |-- show.ultra
+```
+
+And your files can be like this:
 
 ```ruby
-# included.ultra
-
-vari = 'a variable'
-function myFunc()
-    print('myfunc')
-end
+# _init.ultra
+class UsersTemplates
+include 'templates/UsersTemplates/index.ultra'
+include 'templates/UsersTemplates/show.ultra'
 ```
 
 ```ruby
-# includer.ultra
-include 'included.ultra' : MyScope
-# all names of included will be available
-# as static attributes of MyScope
-print(MyScope.vari) # a variable
-MyScope.myFunc() # myfunc
+# index.ultra
+@function index() : UsersTemplates
+Index of users
+@end
+```
+
+```ruby
+# show.ultra
+@function show() : UsersTemplates
+Show a user
+@end
+```
+
+And finally, to include all templates from Users.
+
+```
+# index.ultra
+include 'templates/UsersTemplates'
 ```
 
 ## Modules
@@ -72,4 +121,29 @@ include @Path.To.File
 ```
  You can add many paths as you want but be aware that the search direction is from last to first added. This can be a problem if you have files with same relative path.
 
-(continue)
+This function is available thinking of libraries or customized environments where you can have a set of modules in your applications project (something like the node_modules) and can refer to a modules repository just changing the module path add. It's suggested you don't use it for your own application paths.
+
+## The *load* keyword
+
+Additionally there's a `load` keyword used to add functionalities to you script. However, this is for internal types loading and has no function to any part written by developer. Conventionally, every internal type is loaded by a script and available to developer through `include`. Taken `@Core.Markdown` for example, this is what we have.
+
+```ruby
+load Markdown
+```
+
+So, in your script you write `include @Core.Markdown` and the internal type load action is abstracted.
+
+While it's syntactically allowed, you should not use `load` directly in your script. The reason is because the types often have more methods declared in the including file as we can see in the next example in `@Core.Request`.
+
+```ruby
+load Request 
+function postJson(url, data, headers={}) : Request 
+    headers['Content-Type'] = 'application/json'
+    req = Request.post(url, JSON.create(data), headers)
+    return req
+end 
+
+function getJson() : Response self 
+    return JSON.parse(self.text) 
+end
+```
