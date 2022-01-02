@@ -29,14 +29,30 @@ For this feature, a full explained example will fit better for illustrating clas
 class MyClass
 
 # 2
+function init(arg1, arg2) : MyClass self
+    self.otherAttr = "some attribute"
+end
+
+# 3
 function someStatic() : MyClass
     print("some static")
 end
 
-# 3
+# 4
 function someInstance() : MyClass self
     print("some instance")
+    print(self.arg1)
+    print(self.arg2)
+end
+
+# 5
+MyClass.someVar = 99
+
+# 6
+MyClass.someFunc = function()
+    print('anonymously assigned')
 end
 ```
 
-(To be continued)
+1. The class keyword defining a new type/class
+2. An optional constructor. If not provided, a default constructor with no statements and no arguments is used. If provided, declared parameters is assigned to instance attributes automatically.

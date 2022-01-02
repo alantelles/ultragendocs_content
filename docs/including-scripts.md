@@ -28,6 +28,14 @@ callout
 callout
 ```
 
+## Including many files
+
+When declaring the file path and the path is not a `.ultra` or `.ultra.xxx` file, UltraGen try to include the path following the described sequence:
+
+Assuming you want to include the path `MyClass`
+
+UltraGen searches for **MyClass.ultra** file and includes it. If not found, UltraGen searches for **MyClass/_init.ultra** file and includes it. This is a great way to group all files from that class and use a single file to include all of them. If not found, UltraGen searches for a folder in path **MyClass** and include all files from root level of folder. The files are included in alphabetical order. This is not much recommended however can have its specific use cases. If none of these were found the interpreter will raise an error.
+
 ## Isolating scopes
 
 The best way to isolate scopes is to think your external script as a library and write it as a class. Different from Java or other languages the script file names have nothing to do with class names. Neither there is a helper which relate names in a script with its names.
@@ -38,24 +46,24 @@ Yes. It's a good practice to declare your templates as functions to enclose them
 
 ```html
 # template at root scope
-# temp_root.ultra
+# temp_root.ultra.html
 <h1>{{ title }}</h1>
 ```
 
 ```html
 # template at function scope
-# temp_func.ultra
+# temp_func.ultra.html
 @function h1(title)
     <h1>{{ title }}</h1>
 @end
 ```
 ```ruby
 title = 'some title'
-include 'temp_root.ultra'
+include 'temp_root.ultra.html'
 # will render the template at include
 ```
 ```ruby
-include 'temp_func.ultra'
+include 'temp_func.ultra.html'
 # will not render
 h1('some title')
 # now it's rendered
@@ -67,8 +75,8 @@ If you have a group of related templates in different files you can have a struc
 - templates
 |-- UsersTemplates
 |---- _init.ultra
-   |-- index.ultra
-   |-- show.ultra
+   |-- index.ultra.html
+   |-- show.ultra.html
 ```
 
 And your files can be like this:
@@ -76,19 +84,19 @@ And your files can be like this:
 ```ruby
 # _init.ultra
 class UsersTemplates
-include 'templates/UsersTemplates/index.ultra'
-include 'templates/UsersTemplates/show.ultra'
+include 'templates/UsersTemplates/index.ultra.html'
+include 'templates/UsersTemplates/show.ultra.html'
 ```
 
 ```ruby
-# index.ultra
+# index.ultra.html
 @function index() : UsersTemplates
 Index of users
 @end
 ```
 
 ```ruby
-# show.ultra
+# show.ultra.html
 @function show() : UsersTemplates
 Show a user
 @end
