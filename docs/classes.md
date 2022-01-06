@@ -192,7 +192,7 @@ ct.fromChild()
 
 This code has the following output
 
-```text
+```
 from ChildOne
 from ChildTwo
 from parent
@@ -234,7 +234,7 @@ child.parent.otherFunction()
 
 This prints:
 
-```text
+```
 I'll call my 'parent'
 simulating a super call
 calling other function
