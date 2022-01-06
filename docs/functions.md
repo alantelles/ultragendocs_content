@@ -58,6 +58,17 @@ You can't declare a parameter without a default value after a parameter with a d
 callout
 ```
 
+Functions can be called in chain. You can call a function over the return of another function. You can even break lines using the shown syntax.
+
+```ruby
+x = 'a lowercase words string'
+chained = x.upper().
+    slice(0, 12).
+    replace('E', 'x')
+print(chained)
+# prints "A LOWxRCASx"
+```
+
 Function parameters can be type defined. For this, just set the type before the parameter name. In case of a default parameter, the value must type match the defined type in parameter.
 
 ```ruby
