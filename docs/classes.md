@@ -2,7 +2,7 @@
 
 >The UltraGen types interface
 
-As said before, UltraGen is a primarily object oriented language - even I has some functional capabilities and is able to be used in a procedural style. Every value in UltraGen is an object. The types are interfaced to the developer by the keyword "class".
+As said before, UltraGen is a primarily object oriented language - even it has some functional capabilities and is able to be used in a procedural style. Every value in UltraGen is an object. The types are interfaced to the developer by the keyword "class".
 
 ```callout
 The words class and type will be used interchangeably and refer to the same feature.:info
@@ -54,5 +54,12 @@ MyClass.someFunc = function()
 end
 ```
 
-1. The class keyword defining a new type/class
-2. An optional constructor. If not provided, a default constructor with no statements and no arguments is used. If provided, declared parameters is assigned to instance attributes automatically.
+## 1 - Declaring a class
+The class keyword defining a new type/class.
+
+## 2 - The constructor block
+An optional constructor. If not provided, a default constructor with no statements and no arguments is used. If provided, declared parameters is assigned to instance attributes automatically. In this example, `arg1` and `arg2` will be available as instance attributes of object. The usual "class block" that other languages has for defining attributes in UltraGen is the constructor. This is the block where you define the instance attributes of a class as done with `otherAttr`.
+The constructor declaration must be followed by the keyword `self` indicating that the method is an instance method.
+
+## 3 - Declaring a static method
+The syntax for declaring a static method is very alike a regular function. The difference is you must write a colon and the class to whom that method belongs. 
